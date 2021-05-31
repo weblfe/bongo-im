@@ -1,0 +1,41 @@
+output   = "internal/models"
+wipe     = true
+no-tests = true
+
+[psql]
+dbname = "dbname"
+host   = "localhost"
+port   = 5432
+user   = "dbusername"
+pass   = "dbpassword"
+schema = "myschema"
+blacklist = ["migrations", "other"]
+
+[mysql]
+dbname  = "bongolive"
+host    = "localhost"
+port    = 3306
+user    = "root"
+pass    = "root"
+sslmode = "false"
+blacklist = [
+    "cmf_migrations",
+    "cmf_label_user",
+    "cmf_live_manager",
+    "cmf_seller_goods_class",
+    "cmf_seller_platform_goods",
+    "cmf_shop_order_refund_list",
+    "cmf_shop_points",
+    "cmf_user_attention",
+    "cmf_user_black",
+    "cmf_user_goods_collect"
+]
+
+[mssql]
+dbname  = "dbname"
+host    = "localhost"
+port    = 1433
+user    = "dbusername"
+pass    = "dbpassword"
+sslmode = "disable"
+schema  = "notdbo"
